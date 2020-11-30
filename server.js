@@ -24,18 +24,39 @@ app.post('/webhook', async (req, res) => {
   console.log(JSON.stringify(req.body, null, 2));
   console.log(JSON.stringify(req.query, null, 2));
   if (req.body.events && req.body.events[0] && req.body.events[0].resource.id) {
-    const structuredMessage = {
-      in_reply_to_id: req.body.events[0].resource.id,
-      body: "Hi, what do you want to buy?",
-      structured_content: {
-          center_items: false,
-          disable_text_input: false,
-          type: "select",
-          items: [
-              { "title": "Laptop" }, { "title": "Desktop PC" }, { "title": "Mobile phone" }, { "title": "Webcamera" }, { "title": "Notebook" }, { "title": "Pocket PC" }, { "title": "iWatch" }, { "title": "Other watch" }
-          ]
+    let structuredMessage;
+    const replyToId = req.body.events[0].resource.id;
+    if (req.body.events[0].resource.metadata.body.indexOf('select') > -1) {
+      structuredMessage = {
+        in_reply_to_id: replyToId,
+        body: "Hi, what do you want to buy?",
+        structured_content: {
+            center_items: false,
+            disable_text_input: false,
+            type: "select",
+            items: [
+                { "title": "Laptop" }, { "title": "Desktop PC" }, { "title": "Mobile phone" }, { "title": "Webcamera" }, { "title": "Notebook" }, { "title": "Pocket PC" }, { "title": "iWatch" }, { "title": "Other watch" }
+            ]
+        }
+      };
+    } else if (req.body.events[0].resource.metadata.body.indexOf('link') > -1) {
+      structuredMessage = {
+        "in_reply_to_id": replyToId,
+        "structured_content": {
+          "type": "rich_link",
+          "title": "Ringcentral, Inc.",
+          "subtitle": "Cloud Business Communications",
+          "url": "github://github.com/ringcentral",
+          "url_fallback": "https://github.com/ringcentral",
+          "url_text": "Github"
+        }
       }
-    };
+    } else {
+      structuredMessage = {
+        in_reply_to_id: req.body.events[0].resource.id,
+        body: "Hi~",
+      };
+    }
     try {
       await axios.post(`${process.env.ENGAGE_DIGITAL_SERVER}/1.0/contents`, structuredMessage, {
         headers: {
