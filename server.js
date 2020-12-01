@@ -54,7 +54,7 @@ app.post('/webhook', async (req, res) => {
     } else {
       structuredMessage = {
         in_reply_to_id: req.body.events[0].resource.id,
-        body: "Hi~",
+        body: `Hi~, you can type "select" and "link" to get structured message`,
       };
     }
     try {

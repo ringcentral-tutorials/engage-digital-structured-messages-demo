@@ -4,7 +4,8 @@ A demo of Engage Digital Structured Message by following [Quick Start here](http
 
 ### Requirements:
 
-  Node.js >= 8
+  * Node.js >= 8 (https://nodejs.org/en/download/)
+  * Yarn (If not already installed, go to https://yarnpkg.com/lang/en/docs/install/ to install yarn)
 
 ### Run in Local:
 
@@ -21,13 +22,15 @@ $ cd engage-digital-structured-messages-demo
 $ yarn
 ```
 
-3. Start Ngrok to create to domain for webhook
+3. Start `Ngrok` to create to domain for webhook
 
 ```
 $ yarn ngrok
 ```
 
 4. Create `.env` file as `.env.default`
+
+Using `.env.default` as a template, create the `.env` file with your own access token and server.
 
 ```
 ENGAGE_DIGITAL_ACCESS_TOKEN=your_engage_digital_API_access_token
@@ -49,7 +52,10 @@ Webhook Uri:
 https://xxxxxxx.ap.ngrok.io/webhook
 ```
 
-Ngrok domain from step 3
+Create a new Webhook in Engage Digital Admin web. Make sure to add the `/webhook` to your ngrok URI, And ngrok domain from step 3
 
 
 7. Test by chatting in your Messaging Channel
+
+* Type 'select' in the customer's chat window to see an example of a quick reply
+* type 'link' in the customer's chat window to see an example of a rich link
