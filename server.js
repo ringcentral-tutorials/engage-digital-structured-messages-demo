@@ -14,7 +14,7 @@ app.get('/webhook', (req, res) => {
   console.log(JSON.stringify(req.query, null, 2));
   console.log(JSON.stringify(req.body, null, 2));
   if (req.query['hub.mode'] === 'subscribe') {
-    res.send(req.query['hub.challenge']); // For valudate webhook
+    res.send(req.query['hub.challenge']); // For validate webhook
   }
   res.status(200);
   res.end();
