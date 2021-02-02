@@ -1,0 +1,16 @@
+{
+  "name": "RingCentral Engage Digital Structured Message Demo",
+  "description": "A demo of Engage Digital Structured Message",
+  "repository": "https://github.com/embbnux/engage-digital-structured-messages-demo",
+  "keywords": ["node", "express", "engage-digital", "webhook", "structured-message"],
+  "env": {
+    "ENGAGE_DIGITAL_ACCESS_TOKEN": {
+      "description": "Your Engage Digital API access token",
+      "value": "your_engage_digital_API_access_token"
+    },
+    "ENGAGE_DIGITAL_SERVER": {
+      "description": "Your Engage Digital API server",
+      "value": "https://[YOUR DOMAIN].api.digital.ringcentral.com"
+    }
+  }
+}

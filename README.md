@@ -2,6 +2,10 @@
 
 A demo of Engage Digital Structured Message by following [Quick Start here](https://engage-digital-api-docs.readthedocs.io/en/latest/interactions/structured-messages/quick-start/)
 
+[Online Demo](https://embbnux.github.io/engage-digital-structured-messages-demo/index.html)
+
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Requirements:
 
   * Node.js >= 8 (https://nodejs.org/en/download/)
@@ -56,6 +60,28 @@ Create a new Webhook in Engage Digital Admin web. Make sure to add the `/webhook
 
 
 7. Test by chatting in your Messaging Channel
+
+* Type 'select' in the customer's chat window to see an example of a quick reply
+* type 'link' in the customer's chat window to see an example of a rich link
+
+### Run with Heroku
+
+1. Click `Deploy to Heroku` to have a quick deploy to heroku.
+
+In setup page, setup `ENGAGE_DIGITAL_ACCESS_TOKEN` and `ENGAGE_DIGITAL_SERVER` environment variables.
+
+2. After deployment, create Webhook in Engage Digital Admin web
+
+Webhook Uri:
+
+```
+https://xxxxxxxxxx.herokuapp.com/webhook
+```
+
+Create a new Webhook in Engage Digital Admin web. Make sure to add the `/webhook` to your ngrok URI, And hero domain from step 1
+
+
+3. Test by chatting in your Messaging Channel
 
 * Type 'select' in the customer's chat window to see an example of a quick reply
 * type 'link' in the customer's chat window to see an example of a rich link
