@@ -1,11 +1,11 @@
 {
   "name": "engage-digital-structured-message-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "ngrok": "ngrok http -region ap 3000",
-    "server": "PORT=3000 node ./server.js",
+    "server": "node ./server.js",
     "start": "npm run server"
   },
   "dependencies": {

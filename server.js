@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
 
 app.use(express.json());
 
