@@ -1,7 +1,7 @@
 {
   "name": "RingCentral Engage Digital Structured Message Demo",
   "description": "A demo of Engage Digital Structured Message",
-  "repository": "https://github.com/embbnux/engage-digital-structured-messages-demo",
+  "repository": "https://github.com/ringcentral-tutorials/engage-digital-structured-messages-demo",
   "keywords": ["node", "express", "engage-digital", "webhook", "structured-message"],
   "env": {
     "ENGAGE_DIGITAL_ACCESS_TOKEN": {

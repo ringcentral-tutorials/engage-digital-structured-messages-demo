@@ -1,8 +1,8 @@
 # Demo of Engage Digital Structured Message
 
-A demo of Engage Digital Structured Message by following [Quick Start here](https://engage-digital-api-docs.readthedocs.io/en/latest/interactions/structured-messages/quick-start/)
+A demo of Engage Digital Structured Message by following [Quick Start here](https://developers.ringcentral.com/engage/digital/guide/interactions/structured-messages/quick-start)
 
-[Online Demo](https://embbnux.github.io/engage-digital-structured-messages-demo/index.html)
+[Online Demo](https://ringcentral-tutorials.github.io/engage-digital-structured-messages-demo/index.html)
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -16,7 +16,7 @@ A demo of Engage Digital Structured Message by following [Quick Start here](http
 1. Clone this repo
 
 ```
-$ git clone https://github.com/embbnux/engage-digital-structured-messages-demo.git
+$ git clone https://github.com/ringcentral-tutorials/engage-digital-structured-messages-demo.git
 $ cd engage-digital-structured-messages-demo
 ```
 
