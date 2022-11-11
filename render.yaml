@@ -1,5 +1,6 @@
 services:
   - type: web
+    name: ed-structured-message-demo
     env: node
     plan: free
     buildCommand: npm install
